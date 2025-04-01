@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Sayfa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('arka-planda-resim.jpg'); /* Arka plan resmi */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+
+        .video-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Sosyal medya butonları */
+        .social-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65px;  /* Buton boyutu büyütüldü */
+            height: 65px; /* Buton boyutu büyütüldü */
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social-buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .social-buttons img {
+            width: 55px;  /* Simge boyutu büyütüldü */
+            height: 55px; /* Simge boyutu büyütüldü */
+            object-fit: contain;
+        }
+
+        /* Instagram Butonu (Sol Uç) */
+        .social-buttons .instagram {
+            position: absolute;
+            left: -90px; /* Videodan hafif uzak */
+        }
+
+        /* Telegram Butonu (Sağ Uç) */
+        .social-buttons .telegram {
+            position: absolute;
+            right: -90px; /* Videodan hafif uzak */
+        }
+
+        .address {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Mobil uyum için */
+        @media (max-width: 768px) {
+            .video-container {
+                width: 95%;
+            }
+
+            .social-buttons .instagram {
+                left: -70px;
+            }
+
+            .social-buttons .telegram {
+                right: -70px;
+            }
+
+            .social-buttons a {
+                width: 50px;
+                height: 50px;
+            }
+
+            .social-buttons img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="video/video.mp4" type="video/mp4">
+            Tarayıcınız video öğesini desteklemiyor.
+        </video>
+
+        <!-- Sosyal Medya Butonları -->
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/mall_of_bazaar/" target="_blank" class="instagram">
+                <img src="inst.jpg" alt="Instagram">
+            </a>
+            <a href="https://t.me/MallOfBazaarStore" target="_blank" class="telegram">
+                <img src="tele.jpg" alt="Telegram">
+            </a>
+        </div>
+    </div>
+
+    <div class="address">
+        <p>Adres: Mimarkemalettin mah. Azimkar Sok. No:33 İstanbul, Aksaray 34080</p>
+    </div>
+
+</body>
+</html>
