@@ -1,109 +1,193 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Parallelism by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<div id="wrapper">
+<head>
+    <title>Mall of Bazaar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        /* Ek Stil Düzenlemeleri (Gerekirse) */
+        #header {
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 4;
+            margin-bottom: 2em;
+        }
 
-				<section id="main">
+        #header h1 {
+            font-size: 2.5em;
+            margin: 0 0 0.1em 0;
+            padding: 0;
+        }
 
-						<div class="items">
+        #header p {
+            font-size: 1.1em;
+            margin: 0 0 1.5em 0;
+            padding: 0;
+            opacity: 0.75;
+        }
 
-								<div class="item intro span-2">
-									<h1>Mall of Bazaar</h1>
-									<p>Mimarkemalettin mah.azimkar sok no:33 istanbul,<br />
-									Aksaray 34080</p>
-								</div>
+        #header .address {
+            font-size: 1em;
+            margin: 0.5em 0 1em 0;
+            padding: 0;
+            opacity: 0.75;
+        }
 
-								<article class="item thumb span-1">
-									
-									<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt=""></a>
-								</article>
+        #nav {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-								<article class="item thumb span-2">
-									
-									<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt=""></a>
-								</article>
+        #nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1em 0;
+            display: flex;
+            justify-content: center;
+        }
 
-								<article class="item thumb span-1">
-									
-									<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt=""></a>
-								</article>
+        #nav ul li {
+            display: inline-block;
+            margin: 0 0.5em;
+            padding: 0;
+        }
 
-								<article class="item thumb span-1">
-									
-									<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt=""></a>
-								</article>
+        #nav ul li a {
+            position: relative;
+            display: block;
+            width: 3em;
+            height: 3em;
+            line-height: 3em;
+            border: solid 1px rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.75);
+            opacity: 0.75;
+            transition: opacity 0.3s ease;
+        }
 
-								<article class="item thumb span-3">
-									
-									<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt=""></a>
-								</article>
+        #nav ul li a:hover {
+            opacity: 1;
+        }
 
-								<article class="item thumb span-1">
-									
-									<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt=""></a>
-								</article>
+        .icon {
+            text-decoration: none;
+            border-bottom: none;
+            position: relative;
+        }
 
-								<article class="item thumb span-2">
-									
-									<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt=""></a>
-								</article>
+        .icon:before {
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
 
-								<article class="item thumb span-2">
-									
-									<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt=""></a>
-								</article>
+        .icon > .label {
+            display: none;
+        }
 
-							</div>
+        .icon.brands.fa-instagram:before {
+            content: "\f16d";
+        }
 
-						<div class="items">
+        .icon.brands.fa-telegram:before {
+            content: "\f2c6";
+        }
 
-								<article class="item thumb span-3"><a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt=""></a></article>
-								<article class="item thumb span-2"><a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt=""></a></article>
-								<article class="item thumb span-1"><a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt=""></a></article>
+        .stok-bilgisi-button {
+            display: inline-block;
+            padding: 0.7em 1.5em;
+            font-size: 1em;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 0.5em;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            white-space: nowrap;
+        }
 
-							</div>
+        .stok-bilgisi-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
 
-					</section>
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-				<section id="footer">
-						<section>
-							<p></p>
-						</section>
-						<section>
-							<ul class="icons">
-								
-								<li><a href="https://www.instagram.com/mall_of_bazaar/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								
-								<li><a href="mailto:info@texper.com.tr" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="http://Texper.NET">Texper.NET</a></li>
-							</ul>
-						</section>
-					</section>
+<body class="is-preload">
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="video.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
 
-			</div>
+            <header id="header">
+                <h1>Mall Of Bazaar</h1>
+                <p class="address">
+                    Mimarkemalettin mah. Azimkar sok. No:33 İstanbul, Aksaray
+                    34080
+                </p>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="https://www.instagram.com/mall_of_bazaar/" class="icon brands fa-instagram"
+                                target="_blank"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://t.me/MallOfBazaarStore" class="icon brands fa-telegram"
+                                target="_blank"><span class="label">Telegram</span></a></li>
+                    </ul>
+                    <a href="https://bazaarstok.com" class="stok-bilgisi-button" target="_blank">Stok Bilgisi</a>
+                </nav>
+            </header>
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <footer id="footer">
+                <span class="copyright">&copy; Untitled. Design:
+                    <a href="https://texper.net">texper.net</a>.</span>
+            </footer>
 
-	</body>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            document.body.classList.remove('is-preload');
+        }
+        window.ontouchmove = function () {
+            return false;
+        }
+        window.onorientationchange = function () {
+            document.body.scrollTop = 0;
+        }
+    </script>
+</body>
+
 </html>
